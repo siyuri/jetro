@@ -1,0 +1,389 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url('../fonts/Bebas.woff2') format('woff2'), url('../fonts/Bebas.woff') format('woff'), url('../fonts/Bebas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue.woff2') format('woff2'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url('../fonts/HelveticaNeue-Light.woff2') format('woff2'), url('../fonts/HelveticaNeue-Light.woff') format('woff'), url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url(../images/body__bg.jpg);
+  background-repeat: repeat;
+  font-family: 'HelveticaNeue', sans-serif;
+  color: #fff;
+  font-size: 12px;
+}
+
+.title {
+  font-family: 'Bebas', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text--margin-reset {
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__link {
+  display: block;
+}
+
+.menu__item {
+  display: inline;
+}
+
+.header__menu li+li {
+  margin-left: 25px;
+}
+
+.menu__link {
+  font-family: 'Bebas', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  color: #b9b9b9;
+}
+
+.menu__link:hover {
+  color: #e8663c;
+  transition: all .5s;
+}
+
+/*slider*/
+
+.slider-for {
+  margin-bottom: 20px;
+}
+
+.slider__container {
+  position: relative;
+}
+
+.slider__container::after,
+.slider__container::before,
+.footer__container::before,
+.footer__container::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 60px;
+  background: #e8663c;
+  opacity: 0.5;
+  top: 0;
+  z-index: -1;
+}
+
+.slider__container::after {
+  width: calc(((100vw - 960px)/2));
+  right: 100%;
+}
+
+.slider__container::before {
+  width: calc(((100vw - 960px)/2));
+  left: 100%;
+}
+
+.slider-for__item {
+  height: 400px;
+}
+
+.slider-for__item-img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-nav-img {
+  max-width: 140px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.slick-track {
+  transform: none;
+}
+
+.slider-nav img+img {
+  margin-left: 20px;
+}
+
+.slider-for__item-box {
+  position: absolute;
+  left: 35px;
+  bottom: 30px;
+  background: #e8663c;
+  width: 413px;
+  height: 124px;
+  opacity: 0.8;
+  padding: 20px 30px 25px 20px;
+}
+
+.slider-for__title {
+  margin-bottom: 20px;
+}
+
+.slick-btn {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-75%);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.slick-next {
+  right: 12px;
+}
+
+.slick-prev {
+  left: 12px;
+}
+
+/*content*/
+
+.content__inner {
+  padding: 40px 0 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__item {
+  max-width: 300px;
+}
+
+.content__title {
+  color: #e8663c;
+  margin-bottom: 33px;
+  margin-left: 70px;
+  position: relative;
+}
+
+.content__title::before {
+  content: '';
+  width: 49px;
+  height: 46px;
+  position: absolute;
+  left: -70px;
+  /* background-repeat: no-repeat; а что эта за магия такая? О_О если прописать только здесь, классы с модификатороами его читать не будут О_О*/
+}
+
+.title--gear::before {
+  background: url(../images/about__gear.png);
+  background-repeat: no-repeat;
+}
+
+.title--check::before {
+  background: url(../images/about__check.png);
+  background-repeat: no-repeat;
+
+}
+
+.title--person::before {
+  background: url(../images/about__person.png);
+  background-repeat: no-repeat;
+}
+
+.content__text {
+  max-width: 277px;
+  line-height: 18px;
+  color: #414141;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.content__button-link {
+  font-family: 'Bebas', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.content__button {
+  border: none;
+  width: 56px;
+  height: 31px;
+  background: #e8663c;
+  color: #fff;
+}
+
+.content__button:hover {
+  transition: all .3s;
+  cursor: pointer;
+  outline: 2px dotted #f3b29d;
+}
+
+/*recent*/
+
+.recent-works__title {
+  color: #e8663c;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.recent-works__title:after {
+  content: '';
+  position: absolute;
+  background: url(../images/recent__works-line.png);
+  width: 807px;
+  height: 19px;
+  bottom: 0;
+  left: 130px;
+}
+
+.recent-works__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-works__item-img {
+  display: block;
+  width: 220px;
+  height: 184px;
+}
+
+.recent-works__item-info {
+  border: 1px #b9b9b9;
+  border-style: none solid solid;
+  padding: 10px 13px;
+  margin-bottom: 45px;
+}
+
+.recent-works__item-title {
+  color: #b9b9b9;
+  margin-bottom: 3px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.recent-works__item-date {
+  font-family: 'Bebas', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #e8663c;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+/* footer */
+
+.footer__container {
+  position: relative;
+}
+
+.footer__inner {
+  background: #e8663c;
+  padding: 35px 0 32px;
+}
+
+.footer__container::before,
+.footer__container::after {
+  height: 263px;
+}
+
+.footer__container::after {
+  width: calc(((100vw - 960px)/2));
+  right: 100%;
+}
+
+.footer__container::before {
+  width: calc(((100vw - 960px)/2));
+  left: 100%;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer__item-about {
+  max-width: 265px;
+}
+
+.footer__item-twitter {
+  max-width: 220px;
+}
+
+.footer__item-contact {
+  max-width: 260px;
+}
+
+.footer__about-text {
+  margin-bottom: 20px;
+}
+
+.footer__item-title {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.footer__twitter-date {
+  color: #f3b29d;
+  margin-bottom: 15px;
+}
+
+.footer__contact-text {
+  margin-bottom: 20px;
+}
+
+.footer__link {
+  font-family: 'HelveticaNeue-Light', sans-serif;
+  font-weight: 300;
+  color: #f3b29d;
+}
+
+.footer__phone {
+  color: #fff;
+}
+
+.footer__icons {
+  margin-top: 20px;
+}
